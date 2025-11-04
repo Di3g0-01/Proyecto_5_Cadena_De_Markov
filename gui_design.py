@@ -437,7 +437,7 @@ class MarkovGUI(QMainWindow):
         msg = QMessageBox(self)
         msg.setIcon(QMessageBox.Information)
         msg.setWindowTitle("Guía de Importación")
-        msg.setText("## Formato de Archivo CSV/TXT\n\nEl archivo debe ser una matriz de <b>3 filas por 3 columnas</b>.\n\nLas columnas deben estar separadas por <b>comas (,) o punto y coma (;)</b>.\n\n<b>¡Importante!</b> Cada fila debe sumar 1.\n\nEjemplo:\n0.70,0.20,0.10\n0.30,0.40,0.30\n0.20,0.40,0.40")
+        msg.setText(" Formato de Archivo CSV/TXT\n\nEl archivo debe ser una matriz de 3 filas por 3 columnas.\n\nLas columnas deben estar separadas por comas (,) o punto y coma (;).\n\n¡Importante! Cada fila debe sumar 1.\n\nEjemplo:\n0.70,0.20,0.10\n0.30,0.40,0.30\n0.20,0.40,0.40")
         msg.setStyleSheet("QMessageBox { background-color: #E3F2FD; } QLabel { color: #0D47A1; }")
         msg.exec_()
 
@@ -446,5 +446,5 @@ class MarkovGUI(QMainWindow):
         msg.setIcon(icono)
         msg.setWindowTitle(titulo)
         msg.setText(mensaje)
-        msg.setStyleSheet("QMessageBox { background-color: #E3F2FD; } QLabel { color: #0D47A1; }")
+        msg.setStyleSheet("QMessageBox { background-color: #E3F2FD; } QLabel { color: #000000; }")
         msg.exec_()
