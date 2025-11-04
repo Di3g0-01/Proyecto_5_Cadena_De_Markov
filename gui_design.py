@@ -225,14 +225,14 @@ class MarkovGUI(QMainWindow):
         param_layout.setSpacing(8)
 
         estado_inicial_layout = QHBoxLayout()
-        estado_inicial_layout.addWidget(QLabel("<b>Estado Inicial ($q_0$):</b>"))
+        estado_inicial_layout.addWidget(QLabel("<b>Estado Inicial :</b>"))
         self.combo_estado_inicial = QComboBox()
         self.combo_estado_inicial.addItems(self.estados)
         estado_inicial_layout.addWidget(self.combo_estado_inicial)
         param_layout.addLayout(estado_inicial_layout)
 
         n_dias_layout = QHBoxLayout()
-        n_dias_layout.addWidget(QLabel("<b>Número de Pasos (días) $n$:</b>"))
+        n_dias_layout.addWidget(QLabel("<b>Número de Pasos (días):</b>"))
         self.spin_n_dias = QSpinBox()
         self.spin_n_dias.setRange(1, 100)
         self.spin_n_dias.setValue(7)
@@ -242,7 +242,7 @@ class MarkovGUI(QMainWindow):
         self.main_layout.addWidget(param_group)
 
     def _setup_matriz_transicion_box(self):
-        matriz_box = QGroupBox("Matriz de Transición (P) y Alfabeto ($\\Sigma$)")
+        matriz_box = QGroupBox("Matriz de Transición (P) y Alfabeto")
         layout = QVBoxLayout(matriz_box)
         layout.setSpacing(8)
 
@@ -269,7 +269,7 @@ class MarkovGUI(QMainWindow):
 
     def _setup_botones_generales(self):
         action_layout = QHBoxLayout()
-        self.btn_calcular = QPushButton("🚀 CALCULAR $P^n$")
+        self.btn_calcular = QPushButton("🚀 CALCULAR")
         self.btn_calcular.setStyleSheet("background-color: #43A047;")
         self.btn_reiniciar = QPushButton("🔄 Reiniciar Valores")
         self.btn_reiniciar.setStyleSheet("background-color: #E53935;")
